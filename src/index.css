@@ -1,68 +1,128 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  height: 100vh;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  flex-direction: column;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  gap: 20px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.header {
+  background-color: bisque;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 5px solid darkblue;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.header-title {
+  color: darkblue;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border: solid 1px darkblue;
+  height:290px;
+  width:200px;
+}
+
+.book-image-container {
+  height: auto;
+  width: 100%;
+  padding-top: 2rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.book-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.author {
+  height: 50px;
+  padding: 5px 7px;
+  background-color: darkgrey;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.author-name {
+  font-weight: bold;
+}
+
+.learn {
+  font-family: 'Georgia, Times New Roman', Times, serif;
+  font-size: 20px;
+  border: none;
+  height: 35px;
+  background-color: darkblue;
+  color: #FFFFFF;
+}
+
+.new {
+  border: solid 5px lightgray;
+  border-radius: 10px;
+  height:290px;
+  width:200px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: #FFFFFF;
+  color: lightgray;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.new:hover {
+  background-color: lightgray;
+  color: #FFFFFF;
+}
+
+.main-content {
+  flex: 1;
+  background-color: #FFFFFF;
+  padding: 0 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  gap: 20px;
+}
+
+.footer {
+  background-color: darkblue;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  color: #FFFFFF;
+  font-size: 1rem;
+  margin: 0;
+  text-align: center;
 }
