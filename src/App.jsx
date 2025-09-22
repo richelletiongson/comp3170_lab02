@@ -1,6 +1,7 @@
 import './index.css'
 import Book from './Book'
 import Footer from './Footer'
+import Header from './AppHeader'
 import { useState, useEffect } from 'react'
 import booksData from '../data/books.json'
 
@@ -40,11 +41,8 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      <header className="header">
-        <h1 className="header-title">Book Catalog</h1>
-      </header>
-      
+    <div className="app">    
+      <Header></Header>  
       <main className="main-content">
         <div className="content">
           <div className="new-button-column">
