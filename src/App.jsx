@@ -1,5 +1,6 @@
 import './index.css'
 import Book from './Book'
+import Footer from './Footer'
 import { useState, useEffect } from 'react'
 import booksData from '../data/books.json'
 
@@ -78,10 +79,7 @@ function App() {
           </div>
         </div>
       </main>
-      
-      <footer className="footer">
-        <p className="footer-text">© Richelle Margarette Tiongson, 2025</p>
-      </footer>
+      <Footer></Footer>
     </div>
   );
 }
