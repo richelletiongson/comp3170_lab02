@@ -12,10 +12,8 @@ function Book(props) {
             <div className="book-image-container">
                 <img src={props.image} alt={props.title} className="book-image" />
             </div>
-            <div className="author">
-                <p>by</p>
-            
-                <p className="author-name">{props.author}</p>
+            <div className="price">
+                <p className="price-amount">{props.price}</p>
             </div>
             <button className="learn" onClick={handleLearnMoreClick}>
                 Learn more

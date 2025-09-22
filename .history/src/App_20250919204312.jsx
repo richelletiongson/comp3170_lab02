@@ -51,7 +51,7 @@ function App() {
           {bookData && (
             <Book 
               image={bookData.image}
-              title={bookData.price}
+              title={bookData.title}
               author={bookData.authors}
               url={bookData.url}
             />
@@ -60,17 +60,18 @@ function App() {
           {bookData2 && (
             <Book 
               image={bookData2.image}
-              title={bookData2.price}
+              title={bookData2.title}
               author={bookData2.authors}
               url={bookData2.url}
             />
           )}
-  
+          
+          {/* Render 3 additional books from JSON data */}
           {booksData.slice(0, 3).map((book, index) => (
             <Book 
               key={book.isbn13}
               image={book.image}
-              title={book.price}
+              title={book.title}
               author={book.subtitle || 'No subtitle available'}
               url={book.url}
             />
