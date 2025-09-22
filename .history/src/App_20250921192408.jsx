@@ -46,36 +46,32 @@ function App() {
       
       <main className="main-content">
         <div className="content">
-          <div className="new-button-column">
-            <button className="new">New</button>
-          </div>
+          <button className="new">New</button>
           
-          <div className="books-container">
-            {bookData && (
-              <Book 
-                image={bookData.image}
-                price={bookData.price}
-                url={bookData.url}
-              />
-            )}
-            
-            {bookData2 && (
-              <Book 
-                image={bookData2.image}
-                price={bookData2.price}
-                url={bookData2.url}
-              />
-            )}
-    
-            {booksData.slice(0, 8).map((book, index) => (
-              <Book 
-                key={book.isbn13}
-                image={book.image}
-                price={book.price}
-                url={book.url}
-              />
-            ))}
-          </div>
+          {bookData && (
+            <Book 
+              image={bookData.image}
+              price={bookData.price}
+              url={bookData.url}
+            />
+          )}
+          
+          {bookData2 && (
+            <Book 
+              image={bookData2.image}
+              price={bookData2.price}
+              url={bookData2.url}
+            />
+          )}
+  
+          {booksData.slice(0, 3).map((book, index) => (
+            <Book 
+              key={book.isbn13}
+              image={book.image}
+              price={book.price}
+              url={book.url}
+            />
+          ))}
         </div>
       </main>
       

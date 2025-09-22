@@ -67,7 +67,7 @@ function App() {
               />
             )}
     
-            {booksData.slice(0, 8).map((book, index) => (
+            {booksData.slice(0, 3).map((book, index) => (
               <Book 
                 key={book.isbn13}
                 image={book.image}
